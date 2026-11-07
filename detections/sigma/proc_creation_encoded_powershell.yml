@@ -6,18 +6,22 @@
 title: Encoded PowerShell Command Execution
 id: 0a1b2c3d-1111-4a6e-9f00-000000000001 # unique id for this rule
 status: experimental # not yet tested in a real environment
+
 description: Detects PowerShell started with an encoded command argument, a common obfuscation technique.
-author: practice project (AI-generated)
+author: practice project 
 date: 2026-11-07
+
 logsource:
   category: process_creation # Sysmon process-creation events
   product: windows
+  
 detection:
   # Match when the program is PowerShell.
   selection_image:
     Image|endswith:
       - '\powershell.exe'
       - '\pwsh.exe'
+      
   # Match when the command line has an encoded-command flag.
   selection_flags:
     CommandLine|contains:
@@ -26,6 +30,7 @@ detection:
       - ' -ec '
   # Alert only when both selections match.
   condition: selection_image and selection_flags
+  
 falsepositives:
   - Admin scripts that use encoded commands
 level: medium # how urgent a match is, for triage
