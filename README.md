@@ -1,6 +1,6 @@
-# Detection Engineering Lab 
+# Detection Engineering Lab (practice project)
 
-
+> **Practice project.** AI-generated to test Cloudflare OS. Not a portfolio piece and not evidence of hands-on lab work. Don't present it as the author's own experience.
 
 A small detection-engineering practice repo: two Sigma rules for Windows endpoints, mapped to MITRE ATT&CK, with Atomic Red Team test notes and a basic test that checks rule structure.
 
@@ -18,6 +18,7 @@ detections/sigma/   Sigma rules, one per technique
 tests/atomic/       Notes on running Atomic Red Team tests
 tests/              Structure checks for the rules
 attack_mapping.md   Rule-to-technique table
+LEARNING.md         Walkthrough of the rules and tests
 ```
 
 ## Running the checks
