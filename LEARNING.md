@@ -1,6 +1,6 @@
 # How the detection lab works
 
-This walkthrough explains the rules and the test, so you can read them, understand the logic, and write your own versions.
+
 
 ## What a Sigma rule is
 
