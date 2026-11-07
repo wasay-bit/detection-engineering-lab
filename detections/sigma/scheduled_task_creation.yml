@@ -1,0 +1,22 @@
+title: Scheduled Task Created
+id: 0a1b2c3d-2222-4a6e-9f00-000000000002
+status: experimental
+description: Detects creation of a scheduled task, which attackers use for persistence.
+author: practice project (AI-generated)
+date: 2026-11-07
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4698
+  filter_system:
+    SubjectUserName|endswith: '$'
+  condition: selection and not filter_system
+falsepositives:
+  - Software installers that create scheduled tasks
+level: low
+tags:
+  - attack.persistence
+  - attack.privilege_escalation
+  - attack.t1053.005
