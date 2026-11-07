@@ -1,4 +1,4 @@
-# Detection Engineering Lab (practice project)
+# Detection Engineering Lab 
 
 
 
