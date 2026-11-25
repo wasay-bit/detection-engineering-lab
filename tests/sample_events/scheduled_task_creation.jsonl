@@ -1,0 +1,6 @@
+{"expect": true, "note": "a user creates a scheduled task", "event": {"EventID": 4698, "SubjectUserName": "alice", "TaskName": "\\Updater"}}
+{"expect": true, "note": "a service account creates a task", "event": {"EventID": 4698, "SubjectUserName": "svc_backup", "TaskName": "\\Nightly"}}
+{"expect": true, "note": "EventID stored as text still matches", "event": {"EventID": "4698", "SubjectUserName": "bob"}}
+{"expect": true, "note": "no user name recorded: the rule still alerts", "event": {"EventID": 4698}}
+{"expect": false, "note": "machine account (name ends in $) is filtered out", "event": {"EventID": 4698, "SubjectUserName": "WORKSTATION01$", "TaskName": "\\Vendor"}}
+{"expect": false, "note": "a logon event, not task creation", "event": {"EventID": 4624, "SubjectUserName": "alice"}}
