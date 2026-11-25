@@ -31,7 +31,7 @@ Two kinds of checks run:
 - `tests/test_rules.py` checks that each rule has the required parts (title, id, logsource, detection, condition, ATT&CK tag).
 - `tests/test_rule_matching.py` runs each rule against sample events in `tests/sample_events/`. Each rule has events it should fire on and events it should not. The matcher handles the Sigma syntax these rules use (equality, `contains`, `startswith`, `endswith`, lists, `and`, `or`, `not`). It is not the full Sigma engine, and it fails loudly on anything it doesn't support.
 
-Tests also run on every push through GitHub Actions (`.github/workflows/tests.yml`).
+Automatic runs on every push through GitHub Actions are planned but not yet active.
 
 ## Safety
 
